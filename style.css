@@ -39,7 +39,10 @@ input {
   margin-left: auto;
 }
 .navbar-message {
-  padding: 10px 5px;
+  padding: 5px;
+  text-align: center;
+  color: #e49;
+  background: #333;
 }
 .main {
   padding: 10px;

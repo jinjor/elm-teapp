@@ -7,18 +7,20 @@ import Route
 
 view : Bool -> Maybe String -> Html msg
 view loggedIn maybeError =
-    nav
-        [ class "navbar" ]
-        [ a
-            [ class "navbar-brand"
-            , href (Route.toPath Route.Top)
-            ]
-            [ text "SPA Example" ]
-        , if loggedIn then
-            menuItem (a [ href (Route.toPath Route.Logout) ] [ text "Logout" ])
+    div []
+        [ nav
+            [ class "navbar" ]
+            [ a
+                [ class "navbar-brand"
+                , href (Route.toPath Route.Top)
+                ]
+                [ text "SPA Example" ]
+            , if loggedIn then
+                menuItem (a [ href (Route.toPath Route.Logout) ] [ text "Logout" ])
 
-          else
-            menuItem (a [ href (Route.toPath Route.Top) ] [ text "Login" ])
+              else
+                menuItem (a [ href (Route.toPath Route.Top) ] [ text "Login" ])
+            ]
         , case maybeError of
             Just error ->
                 viewMessage error
