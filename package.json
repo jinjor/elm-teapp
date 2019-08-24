@@ -1,0 +1,16 @@
+{
+  "name": "elmjp-201908",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "elm make src/Main.elm --output=elm.js",
+    "start": "http-server -c 0"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "elm": "^0.19.0-no-deps",
+    "http-server": "^0.11.1"
+  }
+}

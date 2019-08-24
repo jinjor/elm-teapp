@@ -1,0 +1,34 @@
+- TEA は分かったが先に進めない人のための処方箋
+  - SPA 設計どうするの
+  - そのまま Main.elm でやるとどんどん Model, Msg が肥大化
+  - ログイン状態とかどうするの
+  - ドキュメント不足
+
+* 二本の柱
+  - 参考にする
+    - 巨人の肩に乗る
+    - 設計の歴史 ... 常に進化し続けてきた
+      - TEA 誕生（「コンポーネント」推し）
+      - Redux にパクられる
+      - StartApp
+      - StartApp に Effect(Cmd) の概念が追加される
+      - 0.17
+        - 脱 FRP
+        - Subscription の 追加
+      - 「コンポーネント」がアンチパターンと見なされ記述が消える
+      - elm-spa-example 誕生
+      - 0.19 Browser 誕生、 SPA ルーティングが追加される
+      - package.elm-lang.org が SPA 化
+      - elm-spa-example 大幅改修
+  - 考える
+    - アプリケーションによって設計はそれぞれ
+    - 振り回されて後悔しないために
+* 最新の SPA 設計
+  - 0.19 で特に力を入れてきた
+    - package.elm-lang.org
+    - elm-spa-example
+  - 巨大すぎるので簡素な例（このプロジェクト）
+    - 分割の仕方（Elm 本にも書いてある）
+    - Session
+      - ログイン状態
+      - キャッシュ

@@ -1,0 +1,22 @@
+{
+  "checks": {
+    "ImportAll": false,
+    "SingleFieldRecord": false,
+    "UnusedPatternVariable": false,
+    "UnusedVariable": false,
+    "UnnecessaryListConcat": false,
+    "DropConcatOfLists": false,
+    "DropConsOfItemAndList": false,
+    "UseConsOverConcat": false,
+    "MapNothingToNothing": false,
+    "UnnecessaryParens": false,
+    "NoTopLevelSignature": false,
+    "UnusedTopLevel": false,
+    "UnusedValueConstructor": false,
+    "DebugLog": false,
+    "DebugTodo": false
+  },
+  "TriggerWords": {
+    "words": []
+  }
+}

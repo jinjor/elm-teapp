@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>SPA Example</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <script src="./elm.js"></script>
+    <script>
+      const credential = null;
+      try {
+        credential = JSON.parse(localStorage.getItem("credential"));
+      } catch (e) {}
+      const app = Elm.Main.init({
+        flags: { credential }
+      });
+      app.ports.saveCredential.subscribe(credential => {
+        if (credential) {
+          localStorage.setItem("credential", JSON.stringify(credential));
+        } else {
+          localStorage.removeItem("credential");
+        }
+        app.ports.savedCredential.send(credential);
+      });
+    </script>
+  </body>
+</html>
